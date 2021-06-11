@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+    .modal {
+        &__box {
+            width: 400px;
+        }
+
+        &__title {
+            font-size: 37px;
+        }
+
+        &__city,
+        &__button {
+            font-size: 22px;
+        }
+    }
+
+}

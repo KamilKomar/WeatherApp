@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/3f3ca5611b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./dist/css/weather-icons.min.css">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body class="wrapper">
+    <div class="modal">
+        <button class="weather__btn weather__darkmode darkModeBtn"></button>
+        <div class="modal__box">
+            <p class="modal__title">Check The Weather</p>
+            <input class="modal__city" type="text" placeholder="Enter City Name">
+            <p class="modal__error"></p>
+            <button class="modal__button">Search</button>
+        </div>
+    </div>
+    <div class="weather">
+        <div class="weather__top">
+            <button class="weather__btn weather__city-btn"><i class="fas fa-map-marker-alt"></i></button>
+            <p class="weather__city-name"></p>
+            <button class="weather__btn darkModeBtn"></button>
+        </div>
+        <div class="weather__main">
+        </div>
+
+        <div class="weather__bottom">
+            <p class="weather__category">Humidity: </p>
+            <i class="fas fa-tint"></i>
+            <p class="weather__hum"></p>
+
+            <p class="weather__category">Pressure: </p>
+            <i class="fas fa-arrows-alt-v"></i>
+            <p class="weather__press"> </p>
+
+            <p class="weather__category">Wind: </p>
+            <i class="fas fa-wind"></i>
+            <p class="weather__wind"></p>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>

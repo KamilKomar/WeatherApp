@@ -1,0 +1,199 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --bgColor: #fff;
+    --secondColor: #2E3543;
+    --icon: '\f186';
+}
+
+.dark {
+    --bgColor: #2E3543;
+    --secondColor: #fff;
+    --icon: '\f185';
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background-color: var(--bgColor);
+
+}
+
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor);
+    color: var(--secondColor);
+    transition: .3s;
+
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+        padding: 20px;
+        border: 1px solid var(--secondColor);
+        box-shadow: 0 0 10px var(--secondColor);
+        border-radius: 10px;
+    }
+
+    &__title {
+        font-size: 25px;
+
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
+
+    &__city {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 18px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--secondColor);
+        margin-bottom: 18px;
+        color: var(--secondColor);
+
+        &:focus {
+            outline-color: var(--secondColor);
+        }
+
+        &::placeholder {
+            color: #7f8288;
+        }
+    }
+
+    &__button {
+        position: relative;
+        width: 100px;
+        padding: 5px 10px;
+        font-size: 18px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid var(--secondColor);
+        border-radius: 10px;
+        color: var(--secondColor);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(63, 82, 117);
+            color: var(--bgColor);
+        }
+    }
+
+    &__error {
+        margin-bottom: 10px;
+        color: red;
+        // opacity: 0;
+    }
+}
+
+.weather {
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor);
+    color: var(--secondColor);
+    transition: .3s;
+
+    &__top {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        height: 10vh;
+        // background-color: #fff;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &-temp {
+            font-size: 60px;
+        }
+
+        &-icon {
+            font-size: 50px;
+        }
+
+        &-name {
+            font-size: 20px;
+        }
+
+
+    }
+
+    &__btn {
+        height: 100%;
+        padding: 0 10px;
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        color: var(--secondColor);
+        cursor: pointer;
+    }
+
+    &__city-name {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    &__darkmode {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 5vh;
+    }
+
+    &__main {
+        height: 60vh;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 30vh;
+        text-align: center;
+
+    }
+
+}
+
+.darkModeBtn::before {
+    content: var(--icon);
+    font-family: fontAwesome
+}
+
+@import './medium';
+@import './large';
